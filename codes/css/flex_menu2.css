@@ -1,0 +1,28 @@
+.wrapper{
+    background-color: black;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+nav ul li{
+    list-style-type: none;
+    text-decoration: none;
+    flex: 1 1 0;
+    
+}
+
+nav ul li a:hover{
+    background-color: bisque;
+}
+
+
+
+ul li a {
+    color: white;
+    display: block;
+}

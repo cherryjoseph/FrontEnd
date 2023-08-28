@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <h3 id="head-txt">Learning HTML DOM        
+        </h3>
+
+        <button onclick="create()">Create</button>
+        <button onclick="update()">Update</button>
+        <button onclick="del()">Delete</button>
+        <button onclick="show()">show</button>
+        <button id="alert-btn" onclick="greet()">Show alert </button>
+        <button>Change color</button>
+    </div>
+
+
+    <script>
+        
+        let create = ()=>{
+            let current_txt = document.getElementById("head-txt");
+            current_txt.innerText ="cheriyan"
+        }
+
+
+        let update = ()=>{
+            let current_txt=  document.getElementById("head-txt");
+            current_txt.innerText =  current_txt.innerHTML+ "- Added";
+        }
+
+
+        let del =()=>{
+            let x=  document.getElementById("head-txt");
+            x.style.display="none";
+
+        }
+
+
+        let show =()=>{
+            let x=  document.getElementById("head-txt");
+            x.style.display="block";
+        }
+
+        
+
+
+
+
+
+
+
+
+        greet = ()=>{
+            alert("hello everybody");
+        }
+
+        
+    </script>
+    
+</body>
+</html>

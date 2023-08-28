@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local & session storage</title>
+</head>
+<body>
+
+    <form onsubmit="validateRegistration()">
+        <h2>Registration</h2>
+        <input type="text" id="username" placeholder="enter user name"><br><br>
+        <input type="text" id="email" placeholder="email"><br><br>
+        <input type="password" id="pwd" placeholder="password"><br><br>
+        <input type="password" id="confirm-pwd" placeholder="confirm password"><br><br>
+        <input type="submit" value="Register">
+    </form>
+
+    <form onsubmit="login()">
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="enter user name"><br><br>
+        <input type="password" id="login-pwd" placeholder="password"><br><br>
+
+        <input type="submit" value="login">
+    </form>
+
+
+
+
+    <script>
+        // localStorage.setItem("MyName", "Joe");
+        // sessionStorage.setItem("My temp session name","cheriyanJ")
+
+        let username = localStorage.getItem("MyName");
+        console.log(username);
+
+
+
+        function validateRegistration(){
+            let username = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+            let pwd = document.getElementById("pwd").value;
+            let c_pwd = document.getElementById("confirm-pwd").value;
+
+            
+
+            if(pwd.length <= 5){
+                alert("You passwordlength should be > 5 char ");
+            }
+            else if(pwd != c_pwd){
+                alert("Password and confirm are not matching");
+            }
+
+            else {
+                localStorage.setItem("username",username);
+                localStorage.setItem("email", email);
+                localStorage.setItem("pwd",pwd);
+                alert("succesfully registered");
+            }
+        }
+
+
+        function login(){
+             event.preventDefault();
+            let username = document.getElementById("login-username").value;
+            let pwd = document.getElementById("login-pwd").value;
+
+            let stored_username = localStorage.getItem("username");
+            let stored_pwd = localStorage.getItem("pwd");
+
+            console.log('stored_username:'+stored_username);
+            console.log("pwd enetered"+pwd);
+            if(username != stored_username && stored_pwd != pwd){
+                alert("Credentials are invalid");
+            }
+
+        }
+
+
+
+        
+    </script>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count vowels</title>
+</head>
+<body>
+    <script>
+        let s = prompt("Enter string");
+        let s_lower =s.toLowerCase();
+        let vowel_cnt = 0;
+        for ( let i = 0 ; i<s_lower.length ; i++){
+
+            if(s_lower[i] == "a" ||s_lower[i] =="e" || s_lower[i] =="i" ||s_lower[i] =="o" ||s_lower[i] =="u"){
+                vowel_cnt = vowel_cnt +1 ;
+            }
+        }
+
+        console.log("Vower count:"+ vowel_cnt);
+    </script>
+    
+</body>
+</html>

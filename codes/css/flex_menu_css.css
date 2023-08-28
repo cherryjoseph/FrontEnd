@@ -1,0 +1,33 @@
+/* menu base style */
+
+nav{
+    background-color: azure;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+
+nav a {
+    text-decoration: none;
+    /* text-align: center; */
+    color: blueviolet;
+    display: block;
+    padding: 10px;
+}
+
+nav a:hover{
+    background-color: brown;
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+ nav ul li{
+    flex: 1 1 0;
+} 

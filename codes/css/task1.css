@@ -1,0 +1,42 @@
+.logo-container{
+    /*width: 800px;*/
+    background-color: blue;
+    text-align: center;
+    height: 50px;
+    padding: 5px;
+    /* margin-left: 250px; */
+}
+
+.html-container{
+    height: 250px;
+    background-color:turquoise;
+    width:30%;
+    margin: 2%;
+    float: left;
+}
+
+
+.css-container{
+    height: 250px;
+    background-color:brown;
+    width:30%;
+    margin-left: 30%;
+    margin-top: 2%;
+    float: left;
+}
+
+.addr-container{
+    clear: both;
+    background-color: yellow;
+    
+}
+
+.html-container,.css-container h3{
+    text-align: center;
+}
+
+
+
+.addr-container address{
+    text-align: center;
+}

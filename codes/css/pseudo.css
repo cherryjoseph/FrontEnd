@@ -1,0 +1,12 @@
+/*Pseudo class */
+article p:first-child{
+    color:aqua
+}
+
+article a:hover{
+    color: green;
+}
+
+a:hover{
+    color: red;
+}

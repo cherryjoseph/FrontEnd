@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enable disable</title>
+</head>
+<body>
+    <button onclick="greet()"> Click </button>
+    <button id ="btn">Alert</button>
+
+    <div>
+        <h3 id="cnt">0</h3>
+        <button id ="inc">Increment</button>
+        <button id="dec">Decrement</button>
+        <button id ="reset">Reset</button>
+    </div>
+    <script>
+        function greet(){
+            console.log("Hello");
+        }
+
+
+        const btn = document.getElementById("btn");
+        console.log(btn);
+        btn.addEventListener("click", ()=>{
+            console.log("You clicked alert");
+        })
+
+        const inc = document.getElementById("inc");
+        inc.addEventListener("click" , ()=>{
+            let h3_element = document.getElementById("cnt");
+            let h3_val = h3_element.innerHTML;
+            let val = parseInt(h3_val) + 1;
+            h3_element.innerHTML = val;
+
+
+        })
+
+
+        const dec = document.getElementById("dec");
+        dec.addEventListener("click" , ()=>{
+            let h3_element = document.getElementById("cnt");
+            h3_val = h3_element.innerHTML;
+            let val = parseInt(h3_val) - 1;
+            h3_element.innerHTML = val;
+
+
+        })
+        
+
+    </script>
+    
+</body>
+</html>

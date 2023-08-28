@@ -1,0 +1,60 @@
+div p {
+    background-color: aquamarine;
+    padding: 20px;;
+
+}
+
+div main{
+    display: flex;
+}
+
+#para1{
+    flex-basis: 200px;
+}
+
+#para2{
+    flex-grow: 200px;
+}
+
+
+
+
+section{
+    background-color: brown;
+    width: 300px;
+    height: 200px;
+    transition: width 2s ,transform 2s;
+}
+
+section:hover{
+    width: 1200px;
+    transform: rotate(180deg);
+}
+
+aside{
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    animation-name: test-animation; 
+     animation-duration: 10s;
+    /* animation: test-a 5s infinite; */
+}
+
+
+/* select animator */
+@keyframes test-animation {
+    20%{
+        background-color: blue;
+        background-image: url("../images/comm.jpg");
+        background-repeat: no-repeat;
+    }
+
+    40%{
+        background-color: blueviolet;
+    }
+
+    60%{
+        background-color: black;
+    }
+    
+}

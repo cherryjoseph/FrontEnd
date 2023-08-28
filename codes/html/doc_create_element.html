@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom </title>
+</head>
+<body>
+    <div>
+        <input type ="number" id ="num" placeholder="enter number">
+        <button id ="add" onclick="addToDo(event)">Add </button>
+        <button id ="removeall">Remove all </button>
+    </div>
+    <ul id ="tech-u">
+        <li>JS</li>
+        <li>html</li>
+        <li>python</li>
+    </ul>
+
+    <script>
+        function addToDo(e){
+            console.log(e);
+            let a = document.createElement("li");
+            console.log(a);
+            a.innerHTML ="JAVA";
+
+            let b = document.createElement("button");
+            b.textContent="Remove";
+
+
+            //appendchild()
+            const ul = document.getElementById("tech-u");
+            ul.appendChild(a);
+            a.appendChild(b);
+        }
+
+        
+
+    </script>
+    
+</body>
+</html>

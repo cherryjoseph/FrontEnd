@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping cart</title>
+</head>
+<body>
+    <div class="my-cart">
+        <ul id="cart-ul">
+
+        </ul>
+    </div>
+
+
+    <div class="items-list-cont">
+        <ul>
+            <li> Java <button class="add">Add </button> </li> 
+            <li> Python <button class="add">Add </button> </li>
+            <li> HTML <button class="add">Add </button> </li>            
+        </ul>
+
+    </div>
+    <script>
+        const items = document.getElementsByClassName("add")
+        for (let i =0 ; i< items.length ; i++){
+            items[i].addEventListener("click", addToCart);
+        }
+
+        function addToCart(event){
+            console.log("clicked",event.target);
+            let data = this.parentNode.innerText.split(" ")[0];
+            insertData(data);
+
+        }
+
+
+        function insertData(data){
+            const li = document.createElement("LI");
+            const ul = document.getElementById("cart-ul");
+            const t = document.createTextNode(data);
+
+            li.appendChild(t);
+            ul.appendChild(li);
+
+
+
+        }
+
+    </script>
+    
+</body>
+</html>

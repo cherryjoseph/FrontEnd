@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poly</title>
+</head>
+<body>
+    <script>
+        class Main{
+            constructor(id,book){
+                this.x = id;
+                this.y=book;
+            }
+            display = ()=>{
+                let a =`id:${this.x} y:${this.y}`;
+                console.log(a);
+
+            }
+        }
+
+
+        class Main1{
+            constructor(id,book){
+                this.x = id;
+                this.y=book;
+            }
+            display = ()=>{
+                let a =`Yo guys id:${this.x} y:${this.y}`;
+                console.log(a);
+
+            }
+
+        }
+
+
+
+        class Main2{
+            constructor(id,book){
+                this.x = id;
+                this.y=book;
+            }
+            display = ()=>{
+                let a =`Hello guys id:${this.x} y:${this.y}`;
+                console.log(a);
+
+            }
+
+        }
+
+    let obj = new Main(1,"sql book");
+    obj.display();  
+    
+    let obj2 = new Main(1,"PLSQL book");
+    obj2.display();  
+
+
+    let obj3 = new Main(1,"DS book");
+    obj3.display();  
+
+
+    // alternative
+    let arr =[obj ,obj2 ,obj3];
+    arr.forEach((e)=>
+        e.display()
+    );
+
+    </script>
+    
+</body>
+</html>

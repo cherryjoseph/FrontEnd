@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks Part 2</title>
+</head>
+<body>
+    <script>
+        let sortAsc = async(arr)=>{
+            let temp =0;
+            console.log("Orginal arr :", arr)
+            for (let i =0 ; i<arr.length; i++ ){
+                for(let j =0; j<arr.length ; j++) {
+                    if(arr[j] > arr[j+1]){
+                        temp = arr[j];
+                        arr[j]= arr[j+1];
+                        arr[j+1] =temp;
+                     }
+                }
+            }
+            return arr;
+        }
+
+
+
+
+        let sortDesc = async(arr)=>{
+            let temp =0;
+            console.log("Orginal arr :", arr)
+            for (let i =0 ; i<arr.length; i++ ){
+                for(let j =0; j<arr.length ; j++) {
+                    if(arr[j] < arr[j+1]){
+                        temp = arr[j];
+                        arr[j]= arr[j+1];
+                        arr[j+1] =temp;
+                     }
+                }
+            }
+            return arr;
+        }
+
+
+
+
+    sortAsc([1,3,2,5,4,6])
+        .then( (sorted_arr)=>{
+            console.log("Sorted array is :", sorted_arr);
+        })
+        .catch( (err)=>{
+            console.log("Exception:",err);
+        });    
+    
+    
+    sortDesc([1,3,2,5,4,6])
+        .then( (sorted_arr)=>{
+            console.log("Desc sorted array is :", sorted_arr);
+        })
+        .catch( (err)=>{
+            console.log("Exception:",err);
+        });    
+
+    </script>
+    
+</body>
+</html>

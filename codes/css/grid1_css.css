@@ -1,0 +1,15 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: 50% 30% 20%;
+    grid-gap: 10px;
+}
+
+
+.wrapper p{
+    background-color: aqua;
+}
+
+#para1{
+    grid-row: span 2;
+}
+

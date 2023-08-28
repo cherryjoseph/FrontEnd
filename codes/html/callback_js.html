@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <script>
+        function main(p1, p2 ){
+            console.log("In main");
+            console.log("sum ="+(p1+p2));
+        }
+
+
+        function a(){
+            console.log("In a func");
+        }
+
+        function b(){
+            console.log("In b");
+        }
+
+
+        function c(x , y ,z ){
+            console.log("In c");
+
+            x(10,11); // this will invoke main func
+            y();// calls b func
+            z(); //calls c func
+        }
+
+
+        // We invoke only c and pass other funcs as args
+        c(main , a , b);
+
+
+
+    </script>
+    
+</body>
+</html>

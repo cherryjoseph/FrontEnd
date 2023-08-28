@@ -1,0 +1,55 @@
+.navbar{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+
+.navbar ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    
+}
+
+.navbar ul li a:hover{
+    background-color: darkgray;
+}
+
+.navbar .site-menu{
+    padding: 0px;
+}
+
+
+.navbar ul li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+
+
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    margin: 10px;
+}
+
+
+.content article{
+    background-color: darkgray;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    flex : 0 1 32%;
+    
+    
+}

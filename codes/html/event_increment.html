@@ -1,0 +1,40 @@
+<html></html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inctement</title>
+</head>
+<body>
+
+    <h3>Count :<span id="data">0</span></h3>
+
+    <button onclick="inc()">Inc</button>
+    <button onclick="reset()">Reset</button>
+    <script>
+
+
+        let inc = ()=>{
+            let x = document.getElementById("data");
+            x_str= x.innerHTML;
+            console.log(x_str);
+            let y = parseInt(x_str)+1;
+            if(y <=10){
+                console.log("y:"+y);
+                x.innerHTML =y;
+            }
+            else{
+                console.log("Max limit");
+            }    
+
+        }
+
+        let reset = ()=>{
+            let x = document.getElementById("data");
+            x.innerHTML = 0;
+        }
+    </script>
+    
+</body>
+</html>

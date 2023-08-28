@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+</head>
+<body>
+    <div>
+        <label for="todo-text">Enter </label>
+        <input type="text" id="todo-text" name="todo-text" />
+        <button id ="add-btn" onclick="addTodo()">Add</button>
+    </div>
+
+
+    <div>
+        <ul id="todo-ul">
+            
+                <input type="checkbox" id ="wakeup-chk" name="wakeup-chk" value="wakeup" />
+                <li class="todo-li">Wakeup early</li>
+              
+        </ul>
+    </div>
+
+    <script>
+
+        
+
+
+
+        function addTodo(){
+            let new_todo = document.getElementById("todo-text").value;
+            console.log(new_todo);
+
+            const ul = document.getElementById("todo-ul");
+            
+            //create element
+            const li = document.createElement("li");
+            li.classList.add("todo-li");
+            li.textContent = new_todo ;
+
+            const ip = document.createElement("input")
+            ip.type= "checkbox" ;
+            ip.value = new_todo;
+            ip.name = new_todo;
+            ip.id = new_todo;
+
+            ul.appendChild(ip)
+
+
+            ul.appendChild(li);
+
+
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>

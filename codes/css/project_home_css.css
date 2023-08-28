@@ -1,0 +1,434 @@
+body{
+    text-align: center;
+    
+}
+
+#marquee_container  {
+    background-color: orange;
+    margin: 0;
+}
+#marquee_container marquee:hover{
+    color: red;
+}
+
+
+
+
+
+#contacts-container{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(2,1fr);
+    background-color: rgb(19, 17, 17);
+    margin-top: 3px;
+    
+} 
+
+#contacts-container div{
+    
+    color: white;
+}
+
+#contact-email{
+    grid-column: 1 / 3;
+    
+
+}
+
+
+
+/* Nav bar css section */
+#nav-container{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(1,1fr) ;
+    background-color:rgba(10, 243, 243, 0.137) ;
+    margin-top: 1px;
+}
+
+.site-banner{
+    grid-column: 1 / 2;
+}
+
+
+
+
+.tabs{
+    grid-column:  3/ 8;
+}
+
+.tabs ul{
+    list-style-type: none;
+}
+
+.tabs ul li {
+    display: inline;
+}
+
+.tabs ul li a {
+    padding:10px;
+    text-decoration: none;
+    color: black;
+}
+
+.tabs ul li a:hover{
+    background-color: darkgreen;
+}
+
+
+
+.nav-enquiry-btn{
+    grid-column: 11 / 12;
+}
+
+
+.nav-enquiry-btn button{
+    padding:10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
+    border-radius: 11px;
+    background-color: lightgreen;
+}
+
+.nav-enquiry-btn button:hover{
+    background-color: darkgreen;
+}
+
+
+
+
+/* Main Body content  */
+.home-main-content{
+
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(3,1fr); 
+    color: white;
+    margin-top: 1px;
+    background-image: url("../images/home-background-image-crop.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    
+}
+
+/* .home-main-content-bg{
+    display: inline-block;
+
+    grid-column: 1 / 13;
+    grid-row: 1/ 3;
+    height: 500px;
+} */
+
+.home-main-content-header{
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+}
+
+
+
+.home-main-content-tagline{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-top: 50px;
+
+}
+
+
+
+.home-main-content-msg{
+    grid-column: 1 / 3;
+    grid-row: 1 / 1;
+    margin-top: 80px;
+    margin-left: 100px;
+    text-align: left;
+}
+
+
+.home-main-apply-online-btn-container{
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    margin-top: 180px;
+    margin-right: 100px;
+    
+}
+
+.home-main-apply-online-btn-container button{
+    background-color: lightgreen;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.home-main-apply-online-btn-container button:hover{
+    background-color: darkgreen;
+}
+
+
+.home-main-query-form-container{
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
+    
+}
+
+#query-course-form form{
+    border: 1px transparent ;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#query-course-form form button{
+    background-color: skyblue;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+
+#query-course-form h2{
+    margin-right: 105px;
+}
+
+
+
+.home-main-form-container input{
+    height: 25px;
+    border-radius: 5px;
+}
+
+
+
+
+.home-key-features-header-container{
+    grid-column: 1 / 4;
+    grid-row: 2 / 2;
+    margin-top: 100px;
+}
+
+.home-key-features-header{
+       
+    color: black;
+}
+
+
+/* Features cards */
+
+/* .home-key-features-cards-container{
+    grid-column: 1 / 12;
+    grid-row: 4 / 5;
+    background-color: darkgreen;
+} */
+
+
+.home-key-expert-faculty-card{
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+    background-color: #90ee90;
+    width:250px;
+    height: 200px;
+    border-radius: 25px;
+ 
+}
+
+.home-key-equipped-lab-card{
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+    background-color: #90ee90;
+    width:250px;
+    height: 200px;
+    border-radius: 25px;
+    
+
+}
+
+
+.home-key-quality-card{
+    grid-column: 3 / 3;
+    grid-row: 2 / 2;
+    background-color: #90ee90;
+    width:250px;
+    height: 200px;
+    border-radius: 25px;
+    
+
+}
+
+
+.home-key-access-card{
+    grid-column: 4 / 4;
+    grid-row: 2 / 2;
+    background-color: #90ee90;
+    width:250px;
+    height: 200px;
+    border-radius: 25px;
+    
+
+}
+
+.feature-card{
+    margin-top: 250px;
+    margin-left: 10px;
+}
+
+.feature-card:hover{
+    background-color: white;
+    color: black;
+}
+
+/* Courses  */
+
+/* .home-courses-header-container{
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;    
+} */
+
+/* .home-courses-header-container{
+    background-color: blueviolet;
+} */
+
+
+
+.home-courses-header{
+    grid-column: 1 / 4;
+    grid-row: 2 / 2;
+    margin-top: 580px;
+    color: black;
+}
+
+
+
+/* courses cards */
+
+
+.home-fullstack-card{
+    grid-column: 1 / 2;
+    grid-row: 3 / 3;
+    
+    margin-left: 100px;  
+    margin-top:100px;
+     
+}
+
+.home-frontend-card{
+    grid-column: 2 / 3;
+    grid-row: 3 / 3;
+   
+    margin-left: 30px; 
+    margin-top:100px;
+}
+
+.home-backend-card{
+    grid-column: 3 / 4;
+    grid-row: 3 / 3;
+    
+    margin-left: 30px;  
+    margin-top:100px; 
+}
+
+/* second line of courses */
+
+.home-datascience-card{
+    grid-column: 1 / 2;
+    grid-row: 3 / 3;
+    
+    margin-left: 100px; 
+    margin-top:400px;
+}
+
+.home-aws-card{
+    grid-column: 2 / 3;
+    grid-row: 3 / 3;
+    
+    margin-left: 30px; 
+    margin-top:400px;   
+}
+
+
+.home-python-card{
+    grid-column: 3 / 4;
+    grid-row: 3 / 3;
+    
+    margin-left: 30px; 
+    margin-top:400px;    
+}
+
+.course-card{
+    /* margin-top: 10px; */
+    background-color: white;
+    color: black;
+     border: 1px solid rgba(215, 220, 224, 0.377) ;
+    box-shadow: 5px 2px darkgray;
+    width:350px;
+    height: 250px;
+
+}
+
+.course-card h2{
+    background-color: #90ee90;
+}
+
+
+
+
+.course-apply-btn{
+    padding: 10px;
+    background-color: #90ee90;
+}
+
+.course-apply-btn:hover{
+    background-color: darkgreen;
+}
+
+
+/* Footer section  */
+
+
+.home-footer-container{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(1 ,1fr);
+    text-align: left;
+}
+
+.home-footer-container div{
+    margin-top: 10px;
+    background-color: #d4dfe3;
+}
+
+.footer-section-header{
+    text-align: center;
+}
+
+
+.footer-section1{
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    
+}
+
+.footer-section2{
+    grid-row: 1 / 1;
+    grid-column: 2 / 2;
+    
+}
+
+.footer-section3{
+    grid-row: 1 / 1;
+    grid-column: 3 / 3;
+    
+}
+
+.footer-section4{
+    grid-row: 1 / 1;
+    grid-column: 4 / 4;
+    
+}
+
+
+#subscribe-txtbox{
+    height: 20px;
+}

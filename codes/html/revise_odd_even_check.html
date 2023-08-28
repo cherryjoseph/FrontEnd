@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd or Even</title>
+</head>
+<body>
+    <div id ="container">
+        <div id ="input-region">
+            <label for="num">Number</label>
+            <input type="number" id ="num" placeholder="Enter a number">
+            <button id="check_odd_even_btn" onclick="check()">Check</button>
+        </div>
+        
+        
+        <div class="output-region">
+            <div id="answer"></div>
+
+        </div>
+    </div>
+
+    <script>
+        function check(){
+            let v = document.getElementById("num");
+            let answer = document.getElementById("answer");
+            let curr = v.value;
+
+            if((curr %2) == 0 ){               
+                answer.textContent = "Even"
+            }
+            else{
+                answer.textContent = "odd" 
+            }
+
+
+
+        }
+    </script>
+    
+</body>
+</html>

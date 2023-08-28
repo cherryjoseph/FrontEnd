@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/search_cards_css.css">
+</head>
+<body>
+    <div class="search-cont">
+        <form onkeyup="searchData()">
+            <input type="search" id="search-input" placeholder="Search">
+            <!-- <input type="submit" id="submit-btn" value="search"> -->
+            <!-- <button onclick="clearall()">Clear</button> -->
+
+
+        </form>
+    </div>
+
+
+    <div class="container results-cont">
+        <div class="cards">
+          
+          <div class="row">
+            
+            <div class="col-sm-12 col-md-6 col-lg-3 my-2">
+              <div class="card" style="width: 18rem;">
+                <div class="card-header">Python Course</div>
+                  <img src="../images/python.png" class="card-img-top card-img" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Python</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, alias. with Python.</p>
+                    <a href="#" class="btn btn-primary">Click</a>
+                  </div>
+                </div>
+            </div> 
+            
+            
+            <div class=" col-sm-12 col-md-6 col-lg-3 my-2">
+              <div class="card" style="width: 18rem;">
+                <div class="card-header">Java Course</div>
+                  <img src="../images/java.png" class="card-img-top card-img" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Java</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, earum. with Java.</p>
+                    <a href="#" class="btn btn-primary">Click</a>
+                  </div>
+                </div>
+            </div> 
+
+
+
+            <div class=" col-sm-12 col-md-6 col-lg-3 my-2">
+              <div class="card" style="width: 18rem;">
+                <div class="card-header">HTML Course</div>
+                  <img src="../images/html.png" class="card-img-top card-img" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">HTML</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, optio. with HTML.</p>
+                    <a href="#" class="btn btn-primary">Click</a>
+                  </div>
+                </div>
+            </div> 
+
+
+
+            <div class=" col-sm-12 col-md-6 col-lg-3 my-2">
+              <div class="card" style="width: 18rem;">
+                <div class="card-header">CSS Course</div>
+                  <img src="../images/css.png" class="card-img-top card-img" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">CSS</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sapiente?t with CSS.</p>
+                    <a href="#" class="btn btn-primary">Click</a>
+                  </div>
+                </div>
+            </div>
+
+
+
+
+
+          </div>
+            
+            
+            
+            
+              
+
+
+
+        </div>
+
+    </div>
+
+  <script>
+      const searchData = ()=>{
+        event.preventDefault();
+        console.log("In keyup searchdata()");
+        // get value in text box 
+        const searchVal = document.getElementById("search-input").value;
+        console.log("search val",searchVal)
+        // get collection of card text
+        const card_texts = document.getElementsByClassName("card-text");
+
+        if(searchVal==null){
+          console.log("Null search");
+
+        }
+        else{
+
+          for (i=0 ; i<card_texts.length ;i++){
+            if( card_texts[i].innerHTML.toUpperCase().includes(searchVal.toUpperCase() )){
+              console.log("MATCH:",card_texts[i].parentElement);
+              card_texts[i].parentElement.parentElement.parentElement.classList.remove("hidden-card");
+              card_texts[i].parentElement.parentElement.parentElement.classList.add("visible-card");
+            }
+            else{
+              console.log(card_texts[i].innerHTML);
+              console.log("non match",card_texts[i].parentElement);
+              card_texts[i].parentElement.parentElement.parentElement.classList.remove("visible-card");
+              card_texts[i].parentElement.parentElement.parentElement.classList.add("hidden-card");
+            }
+          }
+        }  
+
+      }
+
+
+      const clearall = ()=>{
+        event.preventDefault();
+        console.log("clear all");
+        document.getElementById("search-input").value =""; //clear input box
+
+        const card_texts = document.getElementsByClassName("card-text");
+        for (i=0 ; i<card_texts.length ;i++){
+          card_texts[i].parentElement.parentElement.parentElement.classList.remove("hidden-card");
+        }
+
+
+      }
+
+  </script>  
+    
+</body>
+</html>

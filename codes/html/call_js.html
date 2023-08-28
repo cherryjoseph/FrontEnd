@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call apply and bind</title>
+</head>
+<body>
+    <script>
+        function myFunc(name,city){
+            let n = `Name:${name}\nCity:${city}\country:${this.country}`;
+            console.log(n);
+        }
+
+        // myFunc("cj","blr");
+
+
+
+        let obj = {
+            ename:"vijay",
+            country:"india"
+        }
+
+        console.log(this);
+        // Using call
+
+        myFunc.call(obj,"cj","cochin");
+
+        myFunc.apply(obj, ["joe","newyork"]);
+
+
+        // bind
+
+        let x = myFunc.bind(obj);
+        x("ap","hyd");
+
+
+
+    </script>
+    
+</body>
+</html>

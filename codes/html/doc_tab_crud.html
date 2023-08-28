@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD EMP mgmt</title>
+</head>
+<body>
+    
+    <div id ="form-container">
+        <form onsubmit="submitForm()">
+            <div>
+                <label for="ename">Name</label>
+                <input type="text" name="ename" id="ename">
+            </div>
+
+            <div>
+                <label for="Sal">Salary</label>
+                <input type="text" name="sal" id="sal">
+            </div>
+
+            <div>
+                <input type="submit" id="submit-btn" value="save">
+            </div>
+        </form> 
+    </div>
+    
+    <div>
+        <table id="emp-tab">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Salary</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="emp-tab-body">
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script>
+
+
+        let selectedRow=null;
+        function readForm(){
+            let empObj={};
+            empObj["ename"] = document.getElementById("ename");
+            empObj["sal"]  =document.getElementById("sal");
+
+            return empObj
+        }
+
+
+        function insertData(obj){
+            let tbody = document.getElementById("emp-tab-body");
+            let row = tbody.insertRow(0);
+            cell1 = row.insertCell(0);
+            console.log(obj["ename"]);
+            cell1.innerHTML = obj["ename"].value;
+            
+            cell2  =row.insertCell(1);
+            cell2.innerHTML = obj["sal"].value;
+
+            cell3 = row.insertCell(2);
+            cell3.innerHTML ='<button onclick="onEdit(this)">Edit</button> <button onclick ="onDelete(this)">Delete</button>';
+        }
+
+        function submitForm(){
+            event.preventDefault();
+            let emp = readForm();
+            if(selectedRow ==null){
+                insertData(emp);
+            }
+            else{
+                onUpdate(emp);
+            }    
+        }
+
+        function onEdit(td){
+            console.log("On button click edit ");
+            console.log(this);
+            selectedRow = td.parentElement.parentElement;
+            document.getElementById("ename").value = selectedRow.cells[0].innerHTML;
+            document.getElementById("sal").value =   selectedRow.cells[1].innerHTML;
+        }
+
+
+        function onDelete(td){
+            selectedRow = td.parentElement.parentElement;
+            document.getElementById("emp-tab").deleteRow(selectedRow.rowIndex);
+            selectedRow =null;
+        }
+
+        function onUpdate(obj){
+            selectedRow.cells[0].innerHTML = obj["ename"].value;
+            selectedRow.cells[1].innerHTML = obj["sal"].value;
+        }
+
+    </script>
+
+    
+
+    
+</body>
+</html>

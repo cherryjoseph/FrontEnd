@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple tasks</title>
+</head>
+<body>
+    <h2>Simple tasks </h2>
+    <div>
+        <input type="text" id ="task-input" placeholder="enter a task">
+        <button onclick="add_task()">save</button>
+
+        <ul id="task-ul">
+
+        </ul>
+    </div>
+
+
+    <script>
+        function add_task(){
+            let task_input = document.getElementById("task-input");
+            let task_input_text = task_input.value;
+            let task_ul = document.getElementById("task-ul");
+
+            const task_li = document.createElement("li");
+            const text_node = document.createTextNode(task_input_text);
+
+
+            const chkbox = document.createElement("input");
+            chkbox.type = "checkbox";
+
+            task_li.appendChild(chkbox);
+            task_li.appendChild(text_node);
+
+            task_ul.appendChild(task_li)    ;
+
+
+
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button click counter</title>
+</head>
+<body>
+    <div>
+        <h3>Clicks Counter</h3>
+        <div id="counter">
+            
+        </div>
+        <div>
+            <button id ="inc" onclick="inc()">Increment</button>
+            <button id ="dec" onclick="dec()">Decrement</button>
+
+        </div>
+
+    </div>
+
+    <script>
+
+
+        function inc(){
+            let counter = document.getElementById("counter");
+            counter.textContent = Number(counter.textContent) +1 ;
+
+        }
+
+
+        function dec(){
+            let counter = document.getElementById("counter");
+            counter.textContent = Number(counter.textContent) -1 ; 
+        }
+
+
+    </script>
+</body>
+</html>

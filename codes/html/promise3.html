@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+
+    <script>
+        const doSomething = ()=>{
+
+            return new Promise( (resolve , reject )=>{
+                console.log("In dosomething -> promise");
+
+                //do all you need here
+                resolve("Pass");
+
+                //reject("oh fail");
+            }
+
+
+
+            );
+        }
+
+
+        doSomething()
+            .then( (success_data) =>{console.log("all good:"+success_data)}   )
+            .catch( (fail_data) =>{console.log("failed boy:"+fail_data)} ) ;   
+    </script>
+    
+</body>
+</html>

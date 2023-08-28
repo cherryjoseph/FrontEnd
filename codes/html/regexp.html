@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regexp</title>
+</head>
+<body>
+
+    <script>
+
+        // + - 1 or more
+        //     * - 0 or more
+        //     ? - min 0 , max 1
+        // group operator
+        //     [a-z0-9A-Z]
+            
+        // || - or operator eg: a||b
+        // \ -escpae
+
+        // \d - digits
+        // \w - number or alphabets
+
+        // Range
+        // {}
+        // a{2,3} 
+        //     a min 2 times,max 3 times
+
+        // $ - start and end string
+
+        let input ="Besant";
+        let pattern = /^Besant$/;
+
+        let result = pattern.test(input);
+        console.log(result);
+
+        pattern = /^Besa*nt$/;
+        input ="Besaaaaant";
+         result = pattern.test(input);
+        console.log(result);
+
+        pattern = /^Besa||bnt$/;
+        input ="Besbnt";
+        result = pattern.test(input);
+        console.log('a or b:'+result);
+
+
+
+        pattern = /^[a-zA-Z0-9\@#.]+$/;
+        input = "be01@#.";
+        result = pattern.test(input);
+        console.log('group:'+result);
+
+
+    </script>
+    
+</body>
+</html>

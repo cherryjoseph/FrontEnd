@@ -1,0 +1,58 @@
+.tab-background{
+    background-color: lightblue;
+}
+
+.image-row{
+    height: 500px;
+
+}
+
+.banner-main-img{
+    background-image: url("../images/home-background-image-crop.jpg");
+    background-repeat: no-repeat;
+    max-width: 100%;
+}
+.main-tagline{
+    bottom: 3%;
+    left: 2%;
+}
+
+
+.site-tab-links a:hover{
+    background-color: skyblue;
+}
+
+
+
+
+
+.key-features-container{
+    margin-top: 5%;
+}
+
+.key-features-header{
+    text-align: center;
+}
+
+.features-card{
+    margin: 1%;
+}
+
+
+
+/* Courses */
+
+.courses-header{
+    text-align: center;
+}
+
+
+.course-card-header{
+    padding: 15px;
+}
+
+
+
+.footer-section{
+    margin-right: 2px;
+}

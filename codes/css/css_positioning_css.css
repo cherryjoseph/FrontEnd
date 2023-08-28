@@ -1,0 +1,24 @@
+/* .services{
+    background-color: grey;
+    height: 200px;
+    width:200px;
+} */
+
+
+.services .service1{
+    background-color: aqua;
+    height: 150px;
+    width: 150px;
+    max-width: 150px;
+    position: relative;
+    top: 250px;
+    left:150px;
+}
+
+.services .service2{
+    background-color:lightgray;
+    height: 150px;
+    width: 150px;
+    max-width: 150px;
+    top
+}

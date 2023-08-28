@@ -1,0 +1,39 @@
+
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+
+.flex-container{
+    display: flex;
+    background-color: lightblue;
+    flex-wrap: wrap;
+
+}
+
+.box{
+    height: 100px;
+    
+    flex-basis: 200px;
+
+}
+
+.one{
+    background-color: red;
+    
+}
+
+
+.two{
+    background-color: green;
+    
+}
+
+
+.three{
+    background-color: blue;
+    
+}

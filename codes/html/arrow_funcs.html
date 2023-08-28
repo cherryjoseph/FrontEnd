@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow funcs</title>
+</head>
+<body>
+    <script>
+        const myFunc = ()=>{
+            console.log("In arrow func");
+        }
+
+        const myName = (name , city , a=10 , b=1 )=>{
+            console.log("name"+name);
+            console.log("city:"+city);
+            console.log("Name:"+name +"\n"+"city:"+city); //using \n for new line
+            console.log("A+b:" + (a+b));
+            return a * b;
+        }
+
+        
+
+
+
+        let multiple = myName("cj","blore");
+        console.log("FIRST multiple:"+multiple);
+        multiple = myName("cj","blore",9,9);
+        console.log("multiple:"+multiple);
+
+        myFunc();
+    </script>
+</body>
+</html>

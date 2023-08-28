@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+<body>
+    <script>
+        function myName(name,city,state){
+            // In constructor , create object using this
+            // a and b are  instance variable
+            this.a =name;
+            this.b = city;
+            this.c= state;
+
+            this.hello = (country)=>{
+                let x = `Name:${this.a}\n City:${this.b}\n Country${country}`;
+                console.log(x);
+            }
+
+        }
+
+        let y= new myName("cheriyan","blr","ka");
+        y.hello("India");
+
+
+
+        let z = new myName("joe","chennai","tn");
+        z.hello("sl");
+    </script>
+    
+</body>
+</html>

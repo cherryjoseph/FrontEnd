@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div id ="dom-cont">
+        <h2 id="dom-header-txt">DOM</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, laborum.</p>
+        <button id ="upd-btn"> Update</button>
+    </div>
+
+    <div>
+        <h2 id="js-header-txt">JS</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, laborum.</p>
+        <button id ="upd-btn"> Update</button>
+    </div>
+
+
+
+
+
+    <script>
+        // document.getElementById()
+        // document.getElementsByClassName()
+        // // or use
+        // document.querySelector("#id-name");
+        // document.querySelector(".classname");
+        console.log(document.getElementById("dom-cont").innerHTML);
+
+
+        let t = document.getElementsByTagName("div");
+        console.log(t);
+
+        let h = document.querySelector("#dom-cont");
+        console.log(h);
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+ul{
+    background-color: aqua;
+    list-style: none;
+    padding: 30px;
+}
+
+
+li{
+    background-color: aqua;
+    list-style: none;
+    
+ 
+}
+
+ul li {
+    display: inline;
+    padding: 30px;
+}
+
+ul li:hover{
+    background-color: blue;
+}
+
+ul li:active{
+    background-color: brown;
+}
+
+#child{
+    position: absolute;
+    top: 90px;
+    left: 500px;
+    background-color: burlywood;
+    padding: 20px;
+    display: none;
+}
+
+#parent:hover #child{
+    display: block;
+}
